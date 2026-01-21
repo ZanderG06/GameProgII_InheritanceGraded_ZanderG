@@ -11,19 +11,26 @@ namespace GameProgII_InheritanceGraded_ZanderG
         string[] _answerOptions;
         int _correctAnswer;
 
-        public MultipleChoiceQuestion(string question, string[] answers, int correctAnswers) : base(question, answers.ToString())
+        public MultipleChoiceQuestion(string question, string[] answers, int correctAnswer) : base(question, answers.ToString())
         {
             _answerOptions = answers;
-            _correctAnswer = correctAnswers;
+            _correctAnswer = correctAnswer;
         }
 
         public override bool CheckAnswer()
         {
             string input = Console.ReadLine();
 
+            int inputInt = int.Parse(input);
             
-            
-            return true;
+            if(inputInt == _correctAnswer)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
