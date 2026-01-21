@@ -8,9 +8,9 @@ namespace GameProgII_InheritanceGraded_ZanderG
 {
     internal class TrueOrFalseQuestion : Question
     {
-        public TrueOrFalseQuestion(string question, string answer, string QuestionText, bool answerAsBool) : base(question, answer)
+        public TrueOrFalseQuestion(string QuestionText, bool answerAsBool) : base(QuestionText, answerAsBool.ToString())
         {
-            answer = answerAsBool.ToString();
+            
         }
     }
 }

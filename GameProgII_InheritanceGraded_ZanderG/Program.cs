@@ -10,9 +10,24 @@ namespace GameProgII_InheritanceGraded_ZanderG
     {
         static List<Question> listOfQuestions = new List<Question>();
         int _score = 0;
+        public int questionNum = 0;
         
         static void Main(string[] args)
         {
+            Question question1 = new Question("question1", "answer1");
+
+            listOfQuestions.Add(question1);
+
+            question1.Ask();
+
+            if (question1.CheckAnswer() == true)
+            {
+                Console.WriteLine("Correct!");
+            }
+            else
+            {
+                Console.WriteLine("WRONG");
+            }
         }
     }
 }

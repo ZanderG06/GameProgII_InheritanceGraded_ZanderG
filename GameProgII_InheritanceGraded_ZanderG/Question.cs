@@ -24,7 +24,11 @@ namespace GameProgII_InheritanceGraded_ZanderG
 
         public virtual bool CheckAnswer()
         {
-            return true;
+            string input = Console.ReadLine();
+
+            if(input == _answerText) return true;
+
+            return false;
         }
     }
 }
