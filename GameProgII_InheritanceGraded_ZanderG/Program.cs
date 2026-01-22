@@ -17,9 +17,9 @@ namespace GameProgII_InheritanceGraded_ZanderG
             Question question1 = new Question("What popular energy drink company owns 2 F1 teams?*", "Red Bull");
             Question question2 = new Question("What car manufacturer won the first F1 Constructor's Championship in 1958?", "Vanwall");
             Question question3 = new Question("What driver won their 4th straight F1 Driver's Championship in 2024?", "Max Verstappen");
-            Question question4 = new MultipleChoiceQuestion("Which 2 F1 drivers are the only 2 to hold 7 F1 Driver's Championships?*", new string[] { "Lewis Hamilton & Michael Schumacher", "Max Verstappen & Sebastian Vettel", "Fernando Alonso & Jenson Button" }, 1);
-            Question question5 = new MultipleChoiceQuestion("Which race was the first World Championship F1 Race?", new string[] { "1951 Monaco Grand Prix", "1950 Indianapolis 500", "1952 Italian Grand Prix", "1950 British Grand Prix" }, 4);
-            Question question6 = new MultipleChoiceQuestion("Who is the current reigning F1 Driver's Champion?*", new string[] { "Oscar Piastri", "Max Verstappen", "Lando Norris", "Charles Leclerc", "George Russell" }, 3);
+            Question question4 = new MultipleChoiceQuestion("Which 2 F1 drivers are the only 2 to hold 7 F1 Driver's Championships?*", new[] { "Lewis Hamilton & Michael Schumacher", "Max Verstappen & Sebastian Vettel", "Fernando Alonso & Jenson Button" }, 1);
+            Question question5 = new MultipleChoiceQuestion("Which race was the first World Championship F1 Race?", new[] { "1951 Monaco Grand Prix", "1950 Indianapolis 500", "1952 Italian Grand Prix", "1950 British Grand Prix" }, 4);
+            Question question6 = new MultipleChoiceQuestion("Who is the current reigning F1 Driver's Champion?*", new[] { "Oscar Piastri", "Max Verstappen", "Lando Norris", "Charles Leclerc", "George Russell" }, 3);
             Question question7 = new TrueOrFalseQuestion("True or False? Mercedes has won the most F1 Constructor's Championships.*", false);
             Question question8 = new TrueOrFalseQuestion("True or False? Lewis Hamilton won the F1 Driver's Championship in his rookie season in 2007.", false);
             Question question9 = new TrueOrFalseQuestion("True or False? In 2009 Honda's F1 team was sold for only £1.", true);
@@ -57,6 +57,7 @@ namespace GameProgII_InheritanceGraded_ZanderG
                     Console.WriteLine("WRONG");
                 }
 
+                Console.WriteLine("Press any key to continue");
                 Console.ReadKey(true);
                 Console.Clear();
             }
