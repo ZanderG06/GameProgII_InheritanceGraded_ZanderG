@@ -14,15 +14,15 @@ namespace GameProgII_InheritanceGraded_ZanderG
         static void Main(string[] args)
         {
             //Simon I hope this isn't too convoluted
-            Question question1 = new Question("question1", "answer1");
-            Question question2 = new Question("question2", "answer2");
-            Question question3 = new Question("question3", "answer3");
-            Question question4 = new MultipleChoiceQuestion("question4", new string[] { "a", "b" }, 2);
-            Question question5 = new MultipleChoiceQuestion("question5", new string[] { "a", "b", "c", }, 3);
-            Question question6 = new MultipleChoiceQuestion("question6", new string[] { "a", "b", "c", "d" }, 3);
-            Question question7 = new TrueOrFalseQuestion("question7", true);
-            Question question8 = new TrueOrFalseQuestion("question8", true);
-            Question question9 = new TrueOrFalseQuestion("question9", true);
+            Question question1 = new Question("What popular energy drink company owns 2 F1 teams?*", "Red Bull");
+            Question question2 = new Question("What car manufacturer won the first F1 Constructor's Championship in 1958?", "Vanwall");
+            Question question3 = new Question("What driver won their 4th straight F1 Driver's Championship in 2024?", "Max Verstappen");
+            Question question4 = new MultipleChoiceQuestion("Which 2 F1 drivers are the only 2 to hold 7 F1 Driver's Championships?*", new string[] { "Lewis Hamilton & Michael Schumacher", "Max Verstappen & Sebastian Vettel", "Fernando Alonso & Jenson Button" }, 1);
+            Question question5 = new MultipleChoiceQuestion("Which race was the first World Championship F1 Race?", new string[] { "1951 Monaco Grand Prix", "1950 Indianapolis 500", "1952 Italian Grand Prix", "1950 British Grand Prix" }, 4);
+            Question question6 = new MultipleChoiceQuestion("Who is the current reigning F1 Driver's Champion?*", new string[] { "Oscar Piastri", "Max Verstappen", "Lando Norris", "Charles Leclerc", "George Russell" }, 3);
+            Question question7 = new TrueOrFalseQuestion("True or False? Mercedes has won the most F1 Constructor's Championships.*", false);
+            Question question8 = new TrueOrFalseQuestion("True or False? Lewis Hamilton won the F1 Driver's Championship in his rookie season in 2007.", false);
+            Question question9 = new TrueOrFalseQuestion("True or False? In 2009 Honda's F1 team was sold for only £1.", true);
             listOfQuestions.Add(question1);
             listOfQuestions.Add(question4);
             listOfQuestions.Add(question7);
@@ -35,8 +35,8 @@ namespace GameProgII_InheritanceGraded_ZanderG
 
             //Epic Intro!!!11!!1
             Console.WriteLine("Welcome to Zander's Quiz about");
-            Console.WriteLine("___  ___      _                                  _       \r\n|  \\/  |     | |                                | |      \r\n| .  . | ___ | |_ ___  _ __ ___ _ __   ___  _ __| |_ ___ \r\n| |\\/| |/ _ \\| __/ _ \\| '__/ __| '_ \\ / _ \\| '__| __/ __|\r\n| |  | | (_) | || (_) | |  \\__ \\ |_) | (_) | |  | |_\\__ \\\r\n\\_|  |_/\\___/ \\__\\___/|_|  |___/ .__/ \\___/|_|   \\__|___/\r\n                               | |                       \r\n                               |_|                       ");
-            Console.WriteLine("*and maybe other interests of mine, good luck getting these right");
+            Console.WriteLine("                                                  \r\n                                                  \r\n██████ ▄▄▄  ▄▄▄▄  ▄▄   ▄▄ ▄▄ ▄▄ ▄▄     ▄▄▄    ▄██ \r\n██▄▄  ██▀██ ██▄█▄ ██▀▄▀██ ██ ██ ██    ██▀██    ██ \r\n██    ▀███▀ ██ ██ ██   ██ ▀███▀ ██▄▄▄ ██▀██    ██ \r\n                                                  ");
+            Console.WriteLine("\nAnswers marked with * are up to date as of the 2025 F1 season and may change");
             Console.WriteLine("Press anything to begin");
             Console.ReadKey(true);
             Console.Clear();
@@ -44,6 +44,7 @@ namespace GameProgII_InheritanceGraded_ZanderG
             //The actual quiz
             for (int i = 0; i < listOfQuestions.Count; i++)
             {
+                Console.WriteLine($"Question {i + 1}");
                 listOfQuestions[i].Ask();
 
                 if (listOfQuestions[i].CheckAnswer() == true)

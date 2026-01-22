@@ -19,7 +19,8 @@ namespace GameProgII_InheritanceGraded_ZanderG
 
         public void Ask()
         {
-            Console.WriteLine(_questionText);
+            Console.Write(_questionText);
+            Console.WriteLine();
         }
 
         public virtual bool CheckAnswer()
