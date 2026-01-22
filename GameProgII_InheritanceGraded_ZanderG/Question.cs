@@ -14,7 +14,7 @@ namespace GameProgII_InheritanceGraded_ZanderG
         public Question(string question, string answer)
         {
             _questionText = question;
-            _answerText = answer;
+            _answerText = answer.ToLower();
         }
 
         public void Ask()
@@ -26,7 +26,7 @@ namespace GameProgII_InheritanceGraded_ZanderG
         {
             string input = Console.ReadLine();
 
-            if(input == _answerText) return true;
+            if(input.ToLower() == _answerText) return true;
 
             return false;
         }

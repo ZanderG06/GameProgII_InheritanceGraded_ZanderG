@@ -10,7 +10,6 @@ namespace GameProgII_InheritanceGraded_ZanderG
     {
         static List<Question> listOfQuestions = new List<Question>();
         static int _score;
-        static int questionNum = 0;
         
         static void Main(string[] args)
         {
@@ -19,10 +18,20 @@ namespace GameProgII_InheritanceGraded_ZanderG
             Question question2 = new Question("question2", "answer2");
             Question question3 = new Question("question3", "answer3");
             Question question4 = new MultipleChoiceQuestion("question4", new string[] { "a", "b" }, 2);
+            Question question5 = new MultipleChoiceQuestion("question5", new string[] { "a", "b", "c", }, 3);
+            Question question6 = new MultipleChoiceQuestion("question6", new string[] { "a", "b", "c", "d" }, 3);
+            Question question7 = new TrueOrFalseQuestion("question7", true);
+            Question question8 = new TrueOrFalseQuestion("question8", true);
+            Question question9 = new TrueOrFalseQuestion("question9", true);
             listOfQuestions.Add(question1);
-            listOfQuestions.Add(question2);
-            listOfQuestions.Add(question3);
             listOfQuestions.Add(question4);
+            listOfQuestions.Add(question7);
+            listOfQuestions.Add(question2);
+            listOfQuestions.Add(question5);
+            listOfQuestions.Add(question8);
+            listOfQuestions.Add(question3);
+            listOfQuestions.Add(question6);
+            listOfQuestions.Add(question9);
 
             //Epic Intro!!!11!!1
             Console.WriteLine("Welcome to Zander's Quiz about");
@@ -50,6 +59,10 @@ namespace GameProgII_InheritanceGraded_ZanderG
                 Console.ReadKey(true);
                 Console.Clear();
             }
+
+            Console.WriteLine($"Your Final Score: {_score}/{listOfQuestions.Count}");
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey(true);
         }
     }
 }
