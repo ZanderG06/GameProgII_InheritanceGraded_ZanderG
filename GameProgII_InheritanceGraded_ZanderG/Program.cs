@@ -18,9 +18,11 @@ namespace GameProgII_InheritanceGraded_ZanderG
             Question question1 = new Question("question1", "answer1");
             Question question2 = new Question("question2", "answer2");
             Question question3 = new Question("question3", "answer3");
+            Question question4 = new MultipleChoiceQuestion("question4", new string[] { "a", "b" }, 2);
             listOfQuestions.Add(question1);
             listOfQuestions.Add(question2);
             listOfQuestions.Add(question3);
+            listOfQuestions.Add(question4);
 
             //Epic Intro!!!11!!1
             Console.WriteLine("Welcome to Zander's Quiz about");

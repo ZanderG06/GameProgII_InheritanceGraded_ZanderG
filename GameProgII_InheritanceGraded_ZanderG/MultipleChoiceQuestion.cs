@@ -19,18 +19,46 @@ namespace GameProgII_InheritanceGraded_ZanderG
 
         public override bool CheckAnswer()
         {
-            string input = Console.ReadLine();
+            for(int i = 0; i < _answerOptions.Length; i++)
+            {
+                Console.WriteLine($"({i+1}) {_answerOptions[i]}");
+            }
 
-            int inputInt = int.Parse(input);
-            
-            if(inputInt == _correctAnswer)
+            bool checkingForParse = true;
+
+            while (checkingForParse)
             {
-                return true;
+                string input = Console.ReadLine();
+
+                if (int.TryParse(input, out int inputInt))
+                {
+                    if(inputInt > 0 && inputInt <= _answerOptions.Length)
+                    {
+                        if (inputInt == _correctAnswer)
+                        {
+                            checkingForParse = false;
+                            return true;
+                        }
+                        else
+                        {
+                            checkingForParse = false;
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Answer not valid, please use the numbers besides the answers");
+                        continue;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Answer not valid, please use the numbers besides the answers");
+                    continue;
+                }
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
     }
 }
